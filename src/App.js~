@@ -1,0 +1,29 @@
+import React, { Component } from 'react';
+
+import { createStore, combineReducers } from 'redux';
+import { Provider, connect } from 'react-redux';
+
+import logo from './logo.svg';
+import './App.css';
+import HeaderList from './HeaderList'
+
+import usersReducer from './reducers/users'
+import messagesReducer from './reducers/messages'
+
+const store = createStore( combineReducers({
+  users: usesrReducer, messages: messagesReducer
+}) );
+
+class App extends Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <div className="App">
+          <HeaderList/>        
+        </div>
+      </Provider>
+    );
+  }
+}
+
+export default App;

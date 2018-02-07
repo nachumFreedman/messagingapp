@@ -1,0 +1,23 @@
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+const headerContainer = {backgroundColor: 'black', height: '100vh', width: '20vw',}
+
+class HeaderList extends Component {
+  render() {
+    return (
+      <div>
+        <div style={headerContainer}>
+          <ul style={{color: 'white'}}>
+            <li>
+              nik
+            </li>
+          </ul>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default HeaderList;
